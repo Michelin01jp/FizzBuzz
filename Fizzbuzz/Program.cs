@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Diagnostics;
 
 namespace Fizzbuzz
 {
@@ -7,7 +8,7 @@ namespace Fizzbuzz
     {
         static void Main(string[] args)
         {
-            (new int[100]).Select((m, n) => { n++; Console.WriteLine(n % 15 == 0 ? "FizzBuzz" : (n % 3 == 0 ? "Fizz" : (n % 5 == 0 ? "Buzz" : "" + n))); return n; }).ToArray();
+            var a = (new int[100]).Select((m, n) => { n++; Console.WriteLine(n % 15 == 0 ? "FizzBuzz" : (n % 3 == 0 ? "Fizz" : (n % 5 == 0 ? "Buzz" : "" + n))); return n; });
         }
     }
 }
